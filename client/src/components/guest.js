@@ -5,8 +5,7 @@ const Guest = ({guest, deleteGuest}) => {
 
     console.log(guest);
     const handleDelete = () => {
-        deleteGuestData(guest._id)
-        .then(() => {
+        deleteGuestData(guest._id).then(() => {
             deleteGuest(guest._id)
         });
     };

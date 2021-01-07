@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000/api/guests';
+const baseUrl = 'http://localhost:3000/api/guests/';
 
 export const getGuestData = ()=>{
     return fetch(baseUrl)
@@ -7,7 +7,7 @@ export const getGuestData = ()=>{
 
 export const postGuestData = (payload)=>{
     return fetch(baseUrl, {
-        method: "POST",
+        method: 'POST',
         body: JSON.stringify(payload),
         headers: {"Content-Type": "application/json"}
     })
@@ -16,7 +16,7 @@ export const postGuestData = (payload)=>{
 
 export const deleteGuestData = (id) => {
     return fetch(baseUrl + id, {
-        method: "DELETE"
+        method: 'DELETE'
     })
 };
 
